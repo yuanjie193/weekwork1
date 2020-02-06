@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd ">
+   <!-- <bean id="users" class="com.itdr.pojo.Users">
+        &lt;!&ndash;<property name="username" value="yuan"></property>&ndash;&gt;
+        &lt;!&ndash;<property name="password" value="123"></property>&ndash;&gt;
+        <constructor-arg name="u" value="11"></constructor-arg>
+    </bean>
+    <bean id="a" class="com.itdr.pojo.Users">
+        <property name="username" value="yy"></property>
+    </bean>-->
+
+</beans>

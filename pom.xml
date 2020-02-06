@@ -52,7 +52,12 @@
             <artifactId>spring-context</artifactId>
             <version>4.3.19.RELEASE</version>
         </dependency>
-
+        <!--spring的jdbc导入-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.3.19.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <build>
