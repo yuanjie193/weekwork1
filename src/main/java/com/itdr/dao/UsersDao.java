@@ -6,7 +6,6 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 
 import java.sql.SQLException;
-
 public class UsersDao {
         public Users selectByUsernameAndPassword(String username,String password){
             QueryRunner queryRunner =new QueryRunner(new ComboPooledDataSource());
@@ -43,5 +42,17 @@ public class UsersDao {
             e.printStackTrace();
         }
         return i;
+    }
+    //登录
+    public Users selectByUNameAndPassword(String uname,String password) {
+        QueryRunner queryRunner =new QueryRunner(new ComboPooledDataSource());
+        Users u=null;
+        String sql = "select uid,uname,score from users where uname=? and password=?";
+        try {
+            u = queryRunner.query(sql,new BeanHandler<Users>(Users.class),uname,password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return u;
     }
 }

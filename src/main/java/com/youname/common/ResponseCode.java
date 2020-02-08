@@ -1,4 +1,7 @@
-package com.itdr.common;
+package com.youname.common;
+
+import org.springframework.stereotype.Component;
+
 
 public class ResponseCode<T> {
     //状态码
@@ -6,11 +9,11 @@ public class ResponseCode<T> {
     private T data;
     private String msg;
     //多个构造函数
-    private ResponseCode(T date){
+    private ResponseCode(T data){
         this.status = 200;
-        this.data = date;
+        this.data = data;
     }
-    private ResponseCode(Integer status,String msg){
+    private ResponseCode(Integer status, String msg){
         this.status = status;
         this.msg =msg;
     }
@@ -19,7 +22,7 @@ public class ResponseCode<T> {
         return new ResponseCode(data);
     }
     //失败返回信息的方法
-    public  static ResponseCode toDefeated(Integer status,String msg){
+    public  static ResponseCode toDefeated(Integer status, String msg){
         return new ResponseCode(status, msg);
     }
     public  static ResponseCode toDefeated(String msg){
@@ -43,12 +46,12 @@ public class ResponseCode<T> {
         this.status = status;
     }
 
-    public T getDate() {
+    public T getData() {
         return data;
     }
 
-    public void setDate(T date) {
-        this.data = date;
+    public void setData(T data) {
+        this.data = data;
     }
 
     public String getMsg() {
